@@ -1,0 +1,49 @@
+#include<stdio.h>
+void main()
+{
+    int a[50][50],b[50][50],c[50][50],i,j,r1,c1,r2,c2;
+    printf("Enter number of rows and columns in matrix A= ");
+    scanf("%d%d",&r1,&c1);
+    printf("Enter elements of matrix A= ");
+    for(i=0;i<r1;i++)
+    {
+        for(j=0;j<c1;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter number of rows and columns in matrix B= ");
+    scanf("%d%d",&r2,&c2);
+    printf("Enter elements of matrix B= ");
+    for(i=0;i<r2;i++)
+    {
+        for(j=0;j<c2;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    if(r1==r2 && c1==c2)
+    {
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+                c[i][j]=a[i][j]+b[i][j];
+            }
+        }
+        printf("The addition of the two matrices gives=\n");
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+                printf("%d\t",c[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("Matrix do not have same dimensions and thus cannot be added.");
+    }
+
+}
